@@ -1,0 +1,14 @@
+body{   
+    background-color: #ffcc00;   
+}    
+p{   
+    background-color: #003366;   
+    color:  white;   
+    padding:  25px;   
+    font: large arial;   
+}   
+img{   
+    border: 9px dotted red;   
+    padding:  10px;   
+    background-color: white;   
+}
