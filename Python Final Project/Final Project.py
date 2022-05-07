@@ -56,3 +56,4 @@ for i in range(10):
     num1, num2 = random_nums()
     correct_answer = gen_correct_answer()
 print('Your score: ' + str(score))
+# uwu
