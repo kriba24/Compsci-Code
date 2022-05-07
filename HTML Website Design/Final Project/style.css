@@ -1,16 +1,11 @@
 body {
-    background-image: url(biryani\ background.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-color: black;
+    color: white;
     font-family: Comic Sans MS;
-    font-size: x-large;
 }
-a {
-    background-color: white;
-  }
-img.logo {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-  }  
+table {
+    border: 5px solid white;
+}
+td, th {
+    background-color: gray;
+}
