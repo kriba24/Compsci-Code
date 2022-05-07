@@ -10,18 +10,20 @@ Enter the sign for the problem type desired.
     * Multiplication
 """ )
 num1, num2 = random_nums()
-# print(num1, num2)
 score = 0
-while True:
-    sign = input('Choice: ')
+def gen_correct_answer():
     if sign == "+":
         correct_answer = num1 + num2
-        break
     elif sign == "-":
         correct_answer = num1 - num2
-        break
     elif sign == '*':
         correct_answer = num1 * num2
+    return correct_answer
+
+while True:
+    sign = input('Choice: ')
+    if sign == "+" or sign == "-" or sign == "*":
+        correct_answer = gen_correct_answer()
         break
     else:
         print('Try again!')
@@ -30,6 +32,7 @@ while True:
 def get_guess():
     user_answer = int(input(str(num1) + ' ' + sign + ' ' + str(num2) + " = "))
     return user_answer 
+
 tries = 0
 for i in range(10):
     for i in range(3):
@@ -48,6 +51,8 @@ for i in range(10):
     elif tries == 2:
         score += 2
     else:
+        tries = 0
         print('You missed 3 times. The correct answer was ' + str(correct_answer) + ".")
     num1, num2 = random_nums()
+    correct_answer = gen_correct_answer()
 print('Your score: ' + str(score))
