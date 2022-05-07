@@ -30,10 +30,22 @@ while True:
 def get_guess():
     user_answer = int(input(str(num1) + ' ' + sign + ' ' + str(num2) + " = "))
     return user_answer 
-
+tries = 0
 for i in range(10):
-    user_answer = get_guess()
-    if user_answer == correct_answer:
-        print('Correct!')
+    for i in range(3):
+        user_answer = get_guess()
+        if user_answer == correct_answer:
+            print('Correct!')
+            break
+        else:
+            print('Wrong. Try again!')
+            tries += 1
+    if tries == 0:
         score += 10
+    elif tries == 1:
+        score += 5
+    elif tries == 2:
+        score += 2
+    else:
+        print('You missed 3 times. The correct answer was ' + str(correct_answer) + ".")
     random_nums()
