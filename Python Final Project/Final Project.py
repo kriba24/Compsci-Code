@@ -10,7 +10,7 @@ Enter the sign for the problem type desired.
     * Multiplication
 """ )
 num1, num2 = random_nums()
-print(num1, num2)
+# print(num1, num2)
 score = 0
 while True:
     sign = input('Choice: ')
@@ -38,7 +38,8 @@ for i in range(10):
             print('Correct!')
             break
         else:
-            print('Wrong. Try again!')
+            if tries < 2:
+                print('Wrong. Try again!')
             tries += 1
     if tries == 0:
         score += 10
@@ -48,4 +49,5 @@ for i in range(10):
         score += 2
     else:
         print('You missed 3 times. The correct answer was ' + str(correct_answer) + ".")
-    random_nums()
+    num1, num2 = random_nums()
+print('Your score: ' + str(score))
