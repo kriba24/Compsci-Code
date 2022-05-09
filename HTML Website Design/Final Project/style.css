@@ -1,11 +1,18 @@
 body {
-    background-color: black;
-    color: white;
     font-family: Comic Sans MS;
+    background-image: url(biryani\ background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: Comic Sans MS;
+    font-size: x-large;
 }
 table {
     border: 5px solid white;
 }
 td, th {
     background-color: gray;
+}
+a, p, marquee, h3 {
+    background-color: aqua;
+    color: black;
 }
