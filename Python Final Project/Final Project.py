@@ -51,8 +51,8 @@ for i in range(10):
     elif tries == 2:
         score += 2
     else:
-        tries = 0
         print('You missed 3 times. The correct answer was ' + str(correct_answer) + ".")
+        tries = 0
     num1, num2 = random_nums()
     correct_answer = gen_correct_answer()
 print('Your score: ' + str(score))
