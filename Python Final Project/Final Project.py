@@ -19,7 +19,9 @@ def gen_correct_answer():
     elif sign == '*':
         correct_answer = num1 * num2
     return correct_answer
-
+def get_guess():
+    user_answer = int(input(str(num1) + ' ' + sign + ' ' + str(num2) + " = "))
+    return user_answer 
 while True:
     sign = input('Choice: ')
     if sign == "+" or sign == "-" or sign == "*":
@@ -28,11 +30,6 @@ while True:
     else:
         print('Try again!')
         continue
-
-def get_guess():
-    user_answer = int(input(str(num1) + ' ' + sign + ' ' + str(num2) + " = "))
-    return user_answer 
-
 tries = 0
 for i in range(10):
     for i in range(3):
