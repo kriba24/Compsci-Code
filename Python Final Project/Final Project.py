@@ -30,18 +30,21 @@ while True:
         correct_answer = gen_correct_answer()
         break
     else:
-        print('Try again!')
+        print('ay dumb shit try again!')
         continue
 tries = 0
 for i in range(10):
     for i in range(3):
-        user_answer = get_guess()
+        try:
+            user_answer = get_guess()
+        except:
+            print('dumb shit stop trying to crash the server')
         if user_answer == correct_answer:
-            print('Correct!')
+            print('waw u right!')
             break
         else:
             if tries < 2:
-                print('Wrong. Try again!')
+                print('dumb shit ur wrong try again')
             tries += 1
     if tries == 0:
         score += 10
