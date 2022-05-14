@@ -38,7 +38,7 @@ for i in range(10):
         try:
             user_answer = get_guess()
         except:
-            print('dumb shit stop trying to crash the server')
+            print('dumb shit stop trying to crash the program')
         if user_answer == correct_answer:
             print('waw u right!')
             break
